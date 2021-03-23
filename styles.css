@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+:root {
+  --hue-neutral: 610;
+  --hue-wrong: 16;
+  --hue-correct: 115;
+
+}
+html {
+  overflow:  hidden;
+}
+body {
+  --hue: var(--hue-neutral);
+  background-color: hsl(var(--hue), 70%, 70%);
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+.horizontal_position {
+  display: flex;
+  justify-content: space-between;
+}
+.quiz {
+  width: 100vw;
+  height: 96vh;
+  display: flex;
+  justify-content: center;
+   align-items: center;
+}
+#points_box {
+  width: 15%;
+  background-color: #fff;
+  text-align: center;
+  padding: 1%;
+}
+.container {
+  /* width: 800px; */
+  width: 100%;
+  max-width: 50vw;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1vw;
+  box-shadow: 0 0 10px 1px;
+}
+
+.btn_grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.5vw;
+  margin: 20px 10px;
+}
+.btn_grid > .btn {
+  width: 100%;
+}
+.btn {
+  --hue: var(--hue-neutral);
+  border: 2px solid hsl(var(--hue), 100%, 50%);
+  background-color: hsl(var(--hue), 100%, 80%);
+  border-radius: 5px;
+  padding: 0.45vw 0.8vw;
+  color: #000;
+  font-size: 1vw;
+}
+.btn:hover {
+  border-color: #000;
+}
+.btn.correct {
+  --hue: var(--hue-correct);
+}
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+.controls {
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.start_btn {
+  margin-top: 1vw;
+  margin-bottom: 0.5vw;
+}
+
+.start_btn, .next_btn {
+  font-size: 1.2vw;
+  width: 100%;
+  cursor: default;
+}
+.hide {
+  display: none;
+}
+
+#final_score {
+  font-size: 5vw;
+}
+
+#game_end {
+  text-align: center;
+}
+
+.map_background {
+  background: url(map.png);
+}
+
+@media(max-width: 1700px) {
+  #points_box {
+    width: 20%;
+  }
+  .container {
+    max-width: 56vw;
+  }
+  #points_box {
+    font-size: 1vw;
+  }
+  .btn {
+    font-size: 1.15vw;
+  }
+  #question {
+    font-size: 1.15vw;
+  }
+}
+@media(max-width: 1600px) {
+  #points_box {
+    font-size: 1.15vw;
+  }
+  .btn {
+    font-size: 1.3vw;
+  }
+  #question {
+    font-size: 1.3vw;
+  }
+}
+@media(max-width: 1500px) {
+  #points_box {
+    font-size: 1.25vw;
+  }
+  .btn {
+    font-size: 1.4vw;
+  }
+  #question {
+    font-size: 1.4vw;
+  }
+}
+@media(max-width: 1400px) {
+  #points_box {
+    width: 25%;
+  }
+  .btn {
+    font-size: 1.5vw;
+  }
+  #question {
+    font-size: 1.5vw;
+  }
+}
+@media(max-width: 1300px) {
+  .container {
+    max-width: 65vw;
+  }
+  #points_box {
+    font-size: 1.35vw;
+  }
+  .btn {
+    font-size: 1.55vw;
+  }
+  #question {
+    font-size: 1.55vw;
+  }
+}
+@media(max-width: 1200px) {
+  #points_box {
+    font-size: 1.45vw;
+  }
+  .btn {
+    font-size: 1.65vw;
+  }
+  #question {
+    font-size: 1.65vw;
+  }
+  .btn_grid {
+    gap: 0.7vw;
+  }
+}
+@media(max-width: 1100px) {
+  #points_box {
+    font-size: 1.5vw;
+  }
+  .btn {
+    font-size: 1.75vw;
+  }
+  #question {
+    font-size: 1.75vw;
+  }
+}
+@media(max-width: 1000px) {
+  #points_box {
+    font-size: 1.6vw;
+  }
+  .btn {
+    font-size: 1.85vw;
+  }
+  #question {
+    font-size: 1.85vw;
+  }
+}
+@media(max-width: 900px) {
+  #points_box {
+    width: 30%;
+  }
+  .container {
+    max-width: 75vw;
+  }
+  #points_box {
+    font-size: 1.8vw;
+  }
+  .btn {
+    font-size: 2.3vw;
+  }
+  #question {
+    font-size: 2.3vw;
+  }
+}
+@media(max-width: 800px) {
+  #points_box {
+    width: 35%;
+  }
+  .container {
+    max-width: 85vw;
+  }
+  #points_box {
+    font-size: 2vw;
+  }
+  .btn {
+    font-size: 2.8vw;
+  }
+  #question {
+    font-size: 2.8vw;
+  }
+  .btn_grid {
+    gap: 1vw;
+  }
+}
+@media(max-width: 600px) {
+  #points_box {
+    width: 45%;
+  }
+  .container {
+    max-width: 95vw;
+  }
+  #points_box {
+    font-size: 2.5vw;
+  }
+  .btn {
+    font-size: 3.5vw;
+  }
+  #question {
+    font-size: 3.5vw;
+  }
+  .btn_grid {
+    gap: 1.3vw;
+  }
+}
